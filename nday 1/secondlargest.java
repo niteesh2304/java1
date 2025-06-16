@@ -12,19 +12,28 @@ public class secondlargest{
 		}
 	public static void seclarge(int n,int []arr){
 		int max = Integer.MIN_VALUE;
+		int min = Integer.MAX_VALUE;
 		for(int i = 0; i < n ; i++){
 			if(max < arr[i]){
 				max = arr[i];
 				}
+			if(min > arr[i]){
+				min = arr[i];
+				}
 			}
 		int secmax = Integer.MIN_VALUE;
+		int secmin = Integer.MAX_VALUE;
 		for(int i = 0; i < n ; i++){
 				if(max > arr[i] && arr[i]  > secmax){
 					secmax = arr[i];
 					}
+				if(min < arr[i] && arr[i] < secmin){
+					secmin = arr[i];
+					}
 				}
-		System.out.print(secmax);
-		
+		System.out.print("Second largest : "+secmax);
+		System.out.println(" ");
+		System.out.print("Second smallest : "+secmin);
 		}
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
