@@ -20,12 +20,17 @@ public class removeduplicate{
 		return count;
 		}
 	public static void duplicate(int n,int arr[],int arr1[]){
+		int k = 0;
 		for(int i = 0;i<n;i++){
+		boolean duplicate = false;
 			for(int j = i+1;j<n;j++){
-				if(arr[i] != arr[j]){
-					arr1[i] = arr[j];
-					}
-				}
+				if(arr[i] == arr[j]){
+					duplicate = true;
+					}}
+		if(!duplicate){
+			arr1[k++] = arr[i];
+			}
+				
 			}
 		}
 	public static void arr1(int n,int arr1[]){
