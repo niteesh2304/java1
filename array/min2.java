@@ -1,4 +1,4 @@
-//min of array
+//min,max,secmin and secmax of array
 
 import java.util.Scanner;
 

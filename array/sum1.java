@@ -1,4 +1,5 @@
 //Find the sum of all given elements from an int array?
+//find the avg
 
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ public class sum1{
 		for(int i = 0; i<arr.length; i++){
 			sum += arr[i];
 			}
+		System.out.println(" Average : "+(sum/arr.length));
 		System.out.println(" sum : " + sum);
 		}
 	public static void main(String args[]){
