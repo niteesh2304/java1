@@ -22,6 +22,7 @@ public class secondhalf{
 				max = arr[i];
 				}
 			}
+		System.out.println("THE AVERAGE = "+ (sum/(n/2)));
 		System.out.println("SECOND HALF SUM FROM ARRAYS  : "+sum);
 		System.out.println("MAX =" +max);
 		System.out.println("MIN =" +min);

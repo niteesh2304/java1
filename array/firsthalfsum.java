@@ -24,6 +24,7 @@ public class firsthalfsum{
 				max = arr[i];
 				}
 			}
+		System.out.println("THE AVERAGE = "+ (sum/(n/2)));
 		System.out.println("FIRST HALLF SUM : "+ sum);
 		System.out.println("MAX =" +max);
 		System.out.println("MIN =" +min);
