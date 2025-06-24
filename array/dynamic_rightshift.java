@@ -30,7 +30,7 @@ public class dynamic_rightshift{
 		}
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
-		int []arr = {1,2,3,4,5};
+		int []arr = {3,1,2};
 		System.out.println("Enter the number of right shit: ");
 		int x = sc.nextInt();
 		if(x == 1){
