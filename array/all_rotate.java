@@ -10,10 +10,10 @@ public class all_rotate{
 		int []arr = new int[n];
 		
 
-		int half =  (n+1)/2;
+		int half =  n/2;
 		arr(arr,sc);
-		shift(arr,0,half);
-		shift(arr,half,n);
+		shift(arr,half,0);
+		shift(arr,arr.length,half);
 		op(arr);
 		}
 	
@@ -24,13 +24,13 @@ public class all_rotate{
 			}
 		}
 	public static void shift(int []arr,int start,int end){
-			int temp = arr[arr.length-1];
-			for(int  i = start; i<arr.length-1;i++){
-				arr[end] = arr[end-1];
-				end--;
-				}
-			arr[end] = temp;
+		int half = arr.length/2;
+		int temp = arr[start - 1];
+		for(int i = start -1 ; i > end;i--){
+			arr[i] = arr[i-1];
 			}
+		arr[end] = temp;
+		}
 
 	public static void op(int []arr){
 			for(int i = 0;i<arr.length;i++){
