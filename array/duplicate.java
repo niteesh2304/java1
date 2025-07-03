@@ -21,7 +21,7 @@ public class duplicate{
 	public static int count(int original[]){
 		int count = 0;
 		for(int i = 0 ; i < original.length;i++){
-			for(int j = i+1 ; j < original.length;j++){
+			for(int j = 0 ; j < original.length;j++){
 				if(original[i] == original[j]){
 					count++;
 					}
@@ -33,7 +33,7 @@ public class duplicate{
 		int x = 0;
 		for(int i = 0;i < original.length;i++){
 			boolean isDuplicate = false;
-			for(int j = i+1;j<original.length;j++){
+			for(int j = 0;j<original.length;j++){
 				if(original[i] == original[j])
 					isDuplicate = true;
 				}
