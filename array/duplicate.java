@@ -1,49 +1,46 @@
-//remove duplicate
-
 import java.util.Scanner;
+//remove of duplicate element from an array
 
 public class duplicate{
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Size ");
+		System.out.println("Size:");
 		int n = sc.nextInt();
-		int []original = new int[n];
-		original(original,sc);
-		int count = count(original);
-		int []update = new int[original.length-count]; 
-		duplicate(original,update,count);
+		int []arr = new int[n]; 
+		arr(arr, sc);
+		int count = count(arr);
+		int arr1[] = new int[arr.length-count]; 
+		remove(arr,arr1);
+	}
+	public static void arr(int arr[],Scanner sc){
+		for(int i = 0 ; i < arr.length ; i++){
+			arr[i]= sc.nextInt();
 		}
-	public static void original(int original[],Scanner sc){
-		for(int i = 0 ; i < original.length; i++){
-			original[i] = sc.nextInt();
-			}
-		}
-	public static int count(int original[]){
+	}
+	public static int count(int arr[]){
 		int count = 0;
-		for(int i = 0 ; i < original.length;i++){
-			for(int j = 0 ; j < original.length;j++){
-				if(original[i] == original[j]){
+		for(int i = 0 ; i < arr.length ; i++){
+			for(int j = i + 1 ; j < arr.length ; j++){
+				if(arr[i] == arr[j]){
 					count++;
-					}
+					break;
 				}
 			}
-		return count;
 		}
-	public static void duplicate(int []original,int update[],int count){
+		return count;
+	}
+	public static void remove(int []arr,int []arr1){
 		int x = 0;
-		for(int i = 0;i < original.length;i++){
-			boolean isDuplicate = false;
-			for(int j = 0;j<original.length;j++){
-				if(original[i] == original[j])
-					isDuplicate = true;
+		for(int i = 0 ; i < arr.length;i++){
+			boolean isduplicate = false;
+			for(int j = i+1; j < arr.length ; j++){
+				if(arr[i]==arr[j]){
+					isduplicate = true;
 				}
-			if(!isDuplicate){
-				update[x] = original[i];
+			}if(!isduplicate){
+				arr1[x] = arr[i];
 				x++;
-				}
-			}
-		for(int i = 0;i< update.length;i++){
-			System.out.print(update[i]+" ");
 			}
 		}
 	}
+}
