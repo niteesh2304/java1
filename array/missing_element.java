@@ -11,6 +11,9 @@ public class missing_element{
 		arr(num,sc);
 		int min = min(num);
 		int max = max(num);
+		int count = count(num);
+		int power = power(count);
+		missing(max,min,power);
 	}
 	public static void arr(int num[],Scanner sc){
 		for(int i = 0 ; i < num.length ; i++){
@@ -36,4 +39,47 @@ public class missing_element{
 		}
 	return min;
 	}
+	public static int count(int num[]){
+		int count = 0;
+		while(num[0] != 0){
+			num[0] /= 10;
+			count++;
+			}
+		return count;
+		}
+	public static int power(int count){
+		int power = 1;
+		int z= 1;		
+		while(z< count ){
+		power = power * 10;
+		}
+	return power;
+	}
+	
+	public static void missing(int max, int min ,int power){
+		int num = min ; 
+		while(num<=max){
+		System.out.print(num+" ");
+		num += power;
+		}	
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
